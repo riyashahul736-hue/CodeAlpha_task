@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Handwritten Character Recognition</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>✍️ Handwritten Character Recognition</h1>
+    <p>Upload your handwritten image and get prediction</p>
+
+    <!-- UPLOAD FORM -->
+    <form action="/" method="POST" enctype="multipart/form-data">
+
+        <div class="upload-box">
+            <input type="file" name="image" required>
+        </div>
+
+        <button type="submit">🔍 Predict Character</button>
+
+    </form>
+
+    <!-- RESULT SECTION -->
+    {% if prediction is not none %}
+
+    <div class="result-card">
+
+        <h2>Prediction Result</h2>
+
+        <h1>
+            {% if prediction == 0 %} 0
+            {% elif prediction == 1 %} 1
+            {% elif prediction == 2 %} 2
+            {% elif prediction == 3 %} 3
+            {% elif prediction == 4 %} 4
+            {% elif prediction == 5 %} 5
+            {% elif prediction == 6 %} 6
+            {% elif prediction == 7 %} 7
+            {% elif prediction == 8 %} 8
+            {% elif prediction == 9 %} 9
+            {% else %}
+                {{ prediction }}
+            {% endif %}
+        </h1>
+
+        <p>Confidence: {{ confidence }}%</p>
+
+    </div>
+
+    {% endif %}
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,129 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI', sans-serif;
+}
+
+body{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:linear-gradient(
+        135deg,
+        #ff0000,
+        #ff7f00,
+        #ffff00,
+        #00ff00,
+        #0000ff,
+        #4b0082,
+        #8f00ff
+    );
+    background-size:400% 400%;
+    animation:rainbow 10s ease infinite;
+}
+
+@keyframes rainbow{
+    0%{background-position:0% 50%;}
+    50%{background-position:100% 50%;}
+    100%{background-position:0% 50%;}
+}
+
+.container{
+    width:90%;
+    max-width:700px;
+    background:rgba(255,255,255,0.15);
+    backdrop-filter:blur(15px);
+    padding:40px;
+    border-radius:25px;
+    text-align:center;
+    color:white;
+    box-shadow:0 0 25px rgba(255,255,255,0.5);
+}
+
+h1{
+    margin-bottom:10px;
+}
+
+p{
+    margin-bottom:20px;
+}
+
+.upload-box{
+    border:3px dashed white;
+    padding:40px;
+    border-radius:20px;
+    background:rgba(255,255,255,0.1);
+    margin-bottom:20px;
+}
+
+input[type=file]{
+    width:100%;
+    color:white;
+}
+
+button{
+    background:linear-gradient(
+        90deg,
+        red,
+        orange,
+        yellow,
+        green,
+        blue,
+        indigo,
+        violet
+    );
+    color:white;
+    border:none;
+    padding:14px 30px;
+    border-radius:12px;
+    font-size:18px;
+    cursor:pointer;
+    font-weight:bold;
+}
+
+button:hover{
+    transform:scale(1.05);
+}
+
+.result-card{
+    margin-top:30px;
+    padding:25px;
+    border-radius:15px;
+    background:rgba(255,255,255,0.15);
+}
+
+.result-card h1{
+    font-size:70px;
+    color:#fff;
+    text-shadow:
+        0 0 10px red,
+        0 0 20px yellow,
+        0 0 30px green,
+        0 0 40px blue;
+}
+
+.confidence{
+    width:100%;
+    height:15px;
+    background:#ddd;
+    border-radius:20px;
+    overflow:hidden;
+    margin:15px 0;
+}
+
+.bar{
+    width:95%;
+    height:100%;
+    background:linear-gradient(
+        90deg,
+        red,
+        orange,
+        yellow,
+        green,
+        blue,
+        indigo,
+        violet
+    );
+}
