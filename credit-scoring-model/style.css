@@ -1,0 +1,94 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:linear-gradient(135deg,#0f172a,#1e3a8a,#06b6d4);
+}
+
+.container{
+    width:450px;
+    padding:30px;
+    border-radius:25px;
+    background:linear-gradient(
+        180deg,
+        rgba(255,255,255,0.95),
+        rgba(230,240,255,0.95)
+    );
+    box-shadow:0 15px 40px rgba(0,0,0,0.35);
+    position:relative;
+}
+
+.container::before{
+    content:"🏦 AI BANK";
+    display:block;
+    text-align:center;
+    font-size:28px;
+    font-weight:bold;
+    color:#1e3a8a;
+    margin-bottom:20px;
+}
+
+h1{
+    text-align:center;
+    color:#0f172a;
+    margin-bottom:10px;
+}
+
+p{
+    text-align:center;
+    color:#444;
+    margin-bottom:20px;
+}
+
+label{
+    display:block;
+    margin-top:12px;
+    margin-bottom:5px;
+    font-weight:bold;
+    color:#0f172a;
+}
+
+input{
+    width:100%;
+    padding:12px;
+    border:2px solid #cbd5e1;
+    border-radius:10px;
+    outline:none;
+}
+
+input:focus{
+    border-color:#2563eb;
+}
+
+button{
+    width:100%;
+    padding:14px;
+    margin-top:20px;
+    border:none;
+    border-radius:10px;
+    background:#2563eb;
+    color:white;
+    font-size:16px;
+    font-weight:bold;
+    cursor:pointer;
+}
+
+button:hover{
+    transform:scale(1.03);
+}
+
+#result{
+    margin-top:20px;
+    text-align:center;
+    color:#0f172a;
+    font-size:20px;
+    font-weight:bold;
+}
