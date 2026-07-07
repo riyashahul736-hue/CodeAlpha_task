@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Emotion AI 🎤</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            background: linear-gradient(-45deg,#0f0c29,#302b63,#24243e,#000);
+            background-size: 400% 400%;
+            animation: bg 10s ease infinite;
+            color: white;
+        }
+
+        @keyframes bg {
+            0% {background-position:0% 50%;}
+            50% {background-position:100% 50%;}
+            100% {background-position:0% 50%;}
+        }
+
+        .box {
+            background: rgba(255,255,255,0.1);
+            padding: 40px;
+            border-radius: 20px;
+            backdrop-filter: blur(10px);
+            text-align: center;
+            width: 400px;
+            box-shadow: 0 0 20px black;
+        }
+
+        input {
+            padding: 10px;
+            width: 100%;
+            margin: 10px 0;
+            border-radius: 10px;
+        }
+
+        button {
+            padding: 10px 20px;
+            background: #00c6ff;
+            border: none;
+            border-radius: 10px;
+            color: white;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #0072ff;
+            transform: scale(1.05);
+        }
+
+        .result {
+            margin-top: 20px;
+            padding: 15px;
+            border-radius: 15px;
+            background: linear-gradient(135deg,#00c6ff,#0072ff);
+            animation: pop 0.5s ease;
+        }
+
+        @keyframes pop {
+            from {transform: scale(0);}
+            to {transform: scale(1);}
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="box">
+
+    <h1>🎤 Emotion Recognition AI</h1>
+
+    <form action="/predict" method="post" enctype="multipart/form-data">
+        <input type="file" name="file" accept=".wav" required>
+        <button type="submit">Predict 🚀</button>
+    </form>
+
+    {% if prediction %}
+        <div class="result">
+            <h2>Emotion: {{ prediction }}</h2>
+            <h3>Accuracy: {{ accuracy }} %</h3>
+        </div>
+    {% endif %}
+
+</div>
+
+</body>
+</html>
