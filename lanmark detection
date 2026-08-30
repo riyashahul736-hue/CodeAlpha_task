@@ -1,0 +1,105 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyPjY4UeViZsmzKH3ctzjlSn",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/riyashahul736-hue/CodeAlpha_task/blob/main/lanmark%20detection\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "import os\n",
+        "\n",
+        "print(\"Files in /content:\")\n",
+        "print(os.listdir(\"/content\"))"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "5Id-_INArQQR",
+        "outputId": "494c6fd9-58d7-4bee-bb4e-d2731a688ec9"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Files in /content:\n",
+            "['.config', 'archive (1).zip', 'sample_data']\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "!ls -lh \"/content/archive (1).zip\""
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "zqhP49-ZtEXQ",
+        "outputId": "bd042db5-f1e5-450a-b028-5f482dbba2c3"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "-rw-r--r-- 1 root root 27M Aug 30 12:43 '/content/archive (1).zip'\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "!wget -c \"ORIGINAL_URL\" -O \"/content/archive.zip\""
+      ],
+      "metadata": {
+        "id": "EPuosVJPtg3-",
+        "outputId": "34ad5cb3-a960-4cc6-b04b-181bd0709f1d",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        }
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "--2026-08-30 12:45:44--  http://original_url/\n",
+            "Resolving original_url (original_url)... failed: Name or service not known.\n",
+            "wget: unable to resolve host address ‘original_url’\n"
+          ]
+        }
+      ]
+    }
+  ]
+}
